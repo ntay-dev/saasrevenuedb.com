@@ -1,0 +1,12 @@
+name: Scheduled Data Refresh
+on:
+  schedule:
+    - cron: "0 */6 * * *" # every 6 hours
+  workflow_dispatch: {} # manual trigger
+
+jobs:
+  trigger-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger Cloudflare Pages deploy
+        run: curl -sf -X POST "${{ secrets.CF_DEPLOY_HOOK_URL }}"

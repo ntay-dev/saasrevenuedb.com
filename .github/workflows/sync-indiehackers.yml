@@ -1,0 +1,33 @@
+name: Sync IndieHackers Data
+
+on:
+  schedule:
+    # Sundays at 03:00 UTC
+    - cron: "0 3 * * 0"
+  workflow_dispatch:
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Fetch IndieHackers -> Bronze -> Silver -> Gold
+        env:
+          SUPABASE_ACCESS_TOKEN: ${{ secrets.SUPABASE_ACCESS_TOKEN }}
+        run: node scripts/fetch-indiehackers.mjs
+
+      - name: Upload artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: indiehackers-data-${{ github.run_number }}
+          path: data/indiehackers_products.json
+          retention-days: 30
+          if-no-files-found: ignore

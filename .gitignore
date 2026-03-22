@@ -1,0 +1,41 @@
+# Dependencies
+node_modules/
+
+# Nuxt
+.nuxt/
+.output/
+dist/
+
+# Environment
+.env
+.env.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Playwright MCP
+.playwright-mcp/
+
+# Supabase
+supabase/.temp/
+supabase/*.sql
+!supabase/config.toml
+
+# Build-time generated static data (regenerated on each build)
+public/data/
+
+# Raw data files (too large for git)
+data/
+
+# Claude Code
+.claude/
+
+# Misc
+*.log

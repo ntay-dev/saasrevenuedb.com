@@ -1,0 +1,74 @@
+[env]
+_.file = ".env"
+
+[tasks.dev]
+description = "Start Nuxt dev server"
+run = "npm run dev"
+
+[tasks."dev:host"]
+description = "Start Nuxt dev server on 0.0.0.0:9358"
+run = "npm run dev:host"
+
+[tasks.build]
+description = "Build for production"
+run = "npm run build"
+
+[tasks.deploy]
+description = "Build and deploy to Cloudflare Pages"
+run = "npm run deploy"
+
+[tasks.lint]
+description = "Run ESLint"
+run = "npm run lint"
+
+[tasks."lint:fix"]
+description = "Run ESLint with auto-fix"
+run = "npm run lint:fix"
+
+[tasks.format]
+description = "Format code with Prettier"
+run = "npm run format"
+
+[tasks."type-check"]
+description = "Run TypeScript type checking"
+run = "npm run type-check"
+
+[tasks."db:types"]
+description = "Generate TypeScript types from Supabase"
+run = "npm run db:types"
+
+[tasks."db:push"]
+description = "Push migrations to Supabase"
+run = "npm run db:push"
+
+[tasks."db:seed"]
+description = "Import multi-source data and seed Supabase"
+run = "node scripts/import-sources.mjs && node scripts/seed-supabase.mjs"
+
+# ============================================================
+# Pipeline: Bronze -> Silver -> Gold
+# ============================================================
+
+[tasks."pipeline:trustmrr"]
+description = "Fetch TrustMRR -> Bronze -> Silver -> Gold"
+run = "node scripts/fetch-trustmrr.mjs"
+
+[tasks."pipeline:indiehackers"]
+description = "Fetch IndieHackers -> Bronze -> Silver -> Gold"
+run = "node scripts/fetch-indiehackers.mjs"
+
+[tasks."pipeline:transform"]
+description = "Re-run Bronze -> Silver transform for latest run"
+run = "node scripts/transform-and-refresh.mjs"
+
+[tasks."pipeline:refresh-gold"]
+description = "Refresh Gold materialized view only"
+run = "node scripts/transform-and-refresh.mjs --gold-only"
+
+[tasks.test]
+description = "Run unit tests"
+run = "npx vitest run"
+
+[tasks."test:watch"]
+description = "Run unit tests in watch mode"
+run = "npx vitest"

@@ -1,0 +1,4 @@
+User-Agent: *
+Disallow:
+
+Sitemap: https://indie-radar.com/sitemap.xml
