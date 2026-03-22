@@ -40,7 +40,7 @@ describe("sitemap.xml route handler", () => {
 
   it("includes homepage URL", async () => {
     const result = await sitemapHandler(mockEvent);
-    expect(result).toContain("<loc>https://saas-products.com/</loc>");
+    expect(result).toContain("<loc>https://indie-radar.com/</loc>");
   });
 
   it("sets homepage priority to 1.0", async () => {
@@ -53,22 +53,22 @@ describe("sitemap.xml route handler", () => {
 
   it("includes impressum page", async () => {
     const result = await sitemapHandler(mockEvent);
-    expect(result).toContain("<loc>https://saas-products.com/impressum</loc>");
+    expect(result).toContain("<loc>https://indie-radar.com/impressum</loc>");
   });
 
   it("includes privacy page", async () => {
     const result = await sitemapHandler(mockEvent);
-    expect(result).toContain("<loc>https://saas-products.com/privacy</loc>");
+    expect(result).toContain("<loc>https://indie-radar.com/privacy</loc>");
   });
 
   it("includes terms page", async () => {
     const result = await sitemapHandler(mockEvent);
-    expect(result).toContain("<loc>https://saas-products.com/terms</loc>");
+    expect(result).toContain("<loc>https://indie-radar.com/terms</loc>");
   });
 
-  it("sets static page priority to 0.5", async () => {
+  it("sets static page priority to 0.3", async () => {
     const result = await sitemapHandler(mockEvent);
-    expect(result).toContain("<priority>0.5</priority>");
+    expect(result).toContain("<priority>0.3</priority>");
   });
 
   it("sets static pages changefreq to monthly", async () => {
@@ -79,13 +79,13 @@ describe("sitemap.xml route handler", () => {
   it("includes product URLs from database", async () => {
     const result = await sitemapHandler(mockEvent);
     expect(result).toContain(
-      "<loc>https://saas-products.com/products/notion</loc>",
+      "<loc>https://indie-radar.com/products/notion</loc>",
     );
     expect(result).toContain(
-      "<loc>https://saas-products.com/products/slack</loc>",
+      "<loc>https://indie-radar.com/products/slack</loc>",
     );
     expect(result).toContain(
-      "<loc>https://saas-products.com/products/figma</loc>",
+      "<loc>https://indie-radar.com/products/figma</loc>",
     );
   });
 
@@ -113,6 +113,31 @@ describe("sitemap.xml with no products", () => {
     // Even with the standard mock, the sitemap should be valid XML
     const result = await sitemapHandler({});
     expect(result).toContain("</urlset>");
+  });
+});
+
+describe("sitemap.xml with updated_at", () => {
+  it("uses product updated_at as lastmod when available", async () => {
+    const { createClient } = await import("@supabase/supabase-js");
+    const mockCreateClient = createClient as any;
+
+    mockCreateClient.mockReturnValueOnce({
+      from: vi.fn(() => ({
+        select: vi.fn(() => ({
+          order: vi.fn(() =>
+            Promise.resolve({
+              data: [
+                { slug: "notion", updated_at: "2025-06-15T10:00:00Z" },
+              ],
+            }),
+          ),
+        })),
+      })),
+    });
+
+    const result = await sitemapHandler({});
+    expect(result).toContain("<loc>https://indie-radar.com/products/notion</loc>");
+    expect(result).toContain("<lastmod>2025-06-15</lastmod>");
   });
 });
 

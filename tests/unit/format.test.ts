@@ -72,10 +72,10 @@ describe("formatCompact", () => {
 });
 
 describe("formatNumber", () => {
-  it("formats with de-DE locale by default", () => {
+  it("formats with en-US locale by default", () => {
     const result = formatNumber(1234);
-    // de-DE uses periods as thousand separators
-    expect(result).toBe("1.234");
+    // en-US uses commas as thousand separators
+    expect(result).toBe("1,234");
   });
 
   it("returns dash for null", () => {
@@ -123,9 +123,9 @@ describe("formatPercent", () => {
 });
 
 describe("formatDate", () => {
-  it("formats a date string in German locale", () => {
+  it("formats a date string in en-US locale", () => {
     const result = formatDate("2024-01-15");
-    expect(result).toBe("15. Jan. 2024");
+    expect(result).toBe("Jan 15, 2024");
   });
 
   it("returns dash for null", () => {
@@ -142,14 +142,14 @@ describe("formatDate", () => {
 
   it("formats another date", () => {
     const result = formatDate("2023-06-20");
-    expect(result).toBe("20. Juni 2023");
+    expect(result).toBe("Jun 20, 2023");
   });
 });
 
 describe("formatDateShort", () => {
-  it("formats a date string as short German month + year", () => {
+  it("formats a date string as short month + year", () => {
     const result = formatDateShort("2024-01-15");
-    expect(result).toBe("Jan. 2024");
+    expect(result).toBe("Jan 2024");
   });
 
   it("returns dash for null", () => {
@@ -166,6 +166,6 @@ describe("formatDateShort", () => {
 
   it("formats summer month", () => {
     const result = formatDateShort("2023-06-01");
-    expect(result).toBe("Juni 2023");
+    expect(result).toBe("Jun 2023");
   });
 });

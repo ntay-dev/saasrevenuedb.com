@@ -87,5 +87,72 @@ describe("useProducts", () => {
       const result = await composable.fetchProductDataPoints("abc-123");
       expect(result).toEqual([]);
     });
+
+    it("reshapes rows with source data (s_id present)", async () => {
+      mockDuck.query.mockResolvedValueOnce([
+        {
+          id: "dp1",
+          product_id: "p1",
+          field_name: "mrr",
+          field_value: "5000",
+          source_id: "s1",
+          sourced_at: "2024-01-01",
+          data_as_of: "2024-01-01",
+          s_id: "s1",
+          s_name: "TrustMRR",
+          s_url: "https://trustmrr.com",
+          s_type: "api",
+          s_trust_level: 5,
+          s_notes: "Verified",
+        },
+      ]);
+
+      const result = await composable.fetchProductDataPoints("p1");
+      expect(result).toHaveLength(1);
+      expect(result[0].source).toEqual({
+        id: "s1",
+        name: "TrustMRR",
+        url: "https://trustmrr.com",
+        type: "api",
+        trust_level: 5,
+        notes: "Verified",
+        created_at: "",
+        updated_at: "",
+      });
+    });
+
+    it("reshapes rows without source data (s_id null)", async () => {
+      mockDuck.query.mockResolvedValueOnce([
+        {
+          id: "dp1",
+          product_id: "p1",
+          field_name: "mrr",
+          field_value: "5000",
+          source_id: null,
+          sourced_at: "2024-01-01",
+          data_as_of: null,
+          s_id: null,
+          s_name: null,
+          s_url: null,
+          s_type: null,
+          s_trust_level: null,
+          s_notes: null,
+        },
+      ]);
+
+      const result = await composable.fetchProductDataPoints("p1");
+      expect(result).toHaveLength(1);
+      expect(result[0].source).toBeNull();
+      expect(result[0].data_as_of).toBeNull();
+    });
+  });
+
+  describe("fetchProduct edge cases", () => {
+    it("sets generic error for non-Error throws", async () => {
+      mockDuck.ensureData.mockRejectedValueOnce("string error");
+      const result = await composable.fetchProduct("test");
+      expect(result).toBeNull();
+      expect(composable.error.value).toBe("Product not found");
+    });
   });
 });
