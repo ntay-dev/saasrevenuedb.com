@@ -18,13 +18,13 @@
       </div>
       <div
         v-else
-        class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-linear-to-br from-blue-500/20 to-indigo-500/20 text-sm font-bold text-blue-400 ring-1 ring-white/5"
+        class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-emerald-500/10 text-sm font-bold text-emerald-400 ring-1 ring-white/5"
       >
         {{ product.name.charAt(0) }}
       </div>
       <div class="min-w-0 flex-1">
         <h3
-          class="truncate text-sm font-semibold text-(--color-text-primary) transition-colors group-hover:text-blue-400"
+          class="truncate text-sm font-semibold text-(--color-text-primary) transition-colors group-hover:text-emerald-400"
         >
           {{ product.name }}
         </h3>
@@ -57,7 +57,7 @@
     <!-- MRR -->
     <div
       v-if="product.mrr"
-      class="text-lg font-semibold tabular-nums text-green-400"
+      class="text-lg font-semibold tabular-nums text-emerald-400"
     >
       {{ formatCompact(product.mrr) }}
       <span class="text-xs font-normal text-(--color-text-muted)">MRR</span>

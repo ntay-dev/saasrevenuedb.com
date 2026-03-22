@@ -4,7 +4,7 @@
     :href="founder.xHandle ? `https://x.com/${founder.xHandle}` : undefined"
     :target="founder.xHandle ? '_blank' : undefined"
     :rel="founder.xHandle ? 'noopener noreferrer' : undefined"
-    class="group flex items-center gap-2.5 rounded-xl border border-[var(--color-border)] bg-[var(--color-surface-elevated)] px-3 py-2 transition-all hover:border-blue-500/30 hover:bg-blue-500/5"
+    class="group flex items-center gap-2.5 rounded-xl border border-(--color-border) bg-(--color-surface-elevated) px-3 py-2 transition-all hover:border-blue-500/30 hover:bg-blue-500/5"
   >
     <img
       :src="founder.avatarUrl"
@@ -14,16 +14,16 @@
       @error="handleImgError"
     />
     <div class="min-w-0">
-      <p class="truncate text-sm font-medium text-[var(--color-text-primary)]">
+      <p class="truncate text-sm font-medium text-(--color-text-primary)">
         {{ founder.name }}
       </p>
-      <p v-if="founder.xHandle" class="text-xs text-[var(--color-text-muted)]">
+      <p v-if="founder.xHandle" class="text-xs text-(--color-text-muted)">
         @{{ founder.xHandle }}
       </p>
     </div>
     <ExternalLink
       v-if="founder.xHandle"
-      class="ml-auto size-3 text-[var(--color-text-muted)] opacity-0 transition-opacity group-hover:opacity-100"
+      class="ml-auto size-3 text-(--color-text-muted) opacity-0 transition-opacity group-hover:opacity-100"
     />
   </component>
 </template>
@@ -41,6 +41,6 @@ const props = defineProps<{
 
 function handleImgError(event: Event) {
   const img = event.target as HTMLImageElement;
-  img.src = `https://ui-avatars.com/api/?name=${encodeURIComponent(props.founder.name)}&size=32&background=3b82f6&color=fff&bold=true`;
+  img.src = `https://ui-avatars.com/api/?name=${encodeURIComponent(props.founder.name)}&size=32&background=10b981&color=fff&bold=true`;
 }
 </script>

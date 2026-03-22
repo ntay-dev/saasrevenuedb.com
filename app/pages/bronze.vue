@@ -44,7 +44,7 @@
       <!-- Loading -->
       <div v-if="loading" class="flex justify-center py-12">
         <div
-          class="size-8 animate-spin rounded-full border-2 border-(--color-border) border-t-blue-500"
+          class="size-8 animate-spin rounded-full border-2 border-(--color-border) border-t-emerald-500"
         />
       </div>
 
@@ -204,7 +204,7 @@ import AgSetFilter from "~/components/AgSetFilter.vue";
 ModuleRegistry.registerModules([AllCommunityModule]);
 
 const gridTheme = themeQuartz.withParams({
-  accentColor: "#3b82f6",
+  accentColor: "#10b981",
   backgroundColor: "#0a0a0f",
   foregroundColor: "#f0f0f5",
   headerTextColor: "#65657a",

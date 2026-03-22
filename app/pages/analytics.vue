@@ -161,7 +161,7 @@
         class="flex items-center justify-center py-24 text-(--color-text-muted)"
       >
         <div
-          class="size-8 animate-spin rounded-full border-2 border-(--color-border) border-t-blue-500"
+          class="size-8 animate-spin rounded-full border-2 border-(--color-border) border-t-emerald-500"
         />
       </div>
     </div>

@@ -42,13 +42,13 @@
               v-model="search"
               type="text"
               placeholder="Search products..."
-              class="w-full rounded-lg border border-(--color-border) bg-(--color-surface) py-2 pl-9 pr-3 text-sm text-(--color-text-primary) placeholder:text-(--color-text-muted) focus:border-blue-500 focus:outline-none"
+              class="w-full rounded-lg border border-(--color-border) bg-(--color-surface) py-2 pl-9 pr-3 text-sm text-(--color-text-primary) placeholder:text-(--color-text-muted) focus:border-emerald-500 focus:outline-none"
               @input="applyFilters"
             />
           </div>
           <select
             v-model="selectedCategory"
-            class="rounded-lg border border-(--color-border) bg-(--color-surface) px-3 py-2 text-sm text-(--color-text-primary) focus:border-blue-500 focus:outline-none"
+            class="rounded-lg border border-(--color-border) bg-(--color-surface) px-3 py-2 text-sm text-(--color-text-primary) focus:border-emerald-500 focus:outline-none"
             @change="applyFilters"
           >
             <option value="">All categories</option>
@@ -62,7 +62,7 @@
           </select>
           <select
             v-model="selectedSource"
-            class="rounded-lg border border-(--color-border) bg-(--color-surface) px-3 py-2 text-sm text-(--color-text-primary) focus:border-blue-500 focus:outline-none"
+            class="rounded-lg border border-(--color-border) bg-(--color-surface) px-3 py-2 text-sm text-(--color-text-primary) focus:border-emerald-500 focus:outline-none"
             @change="applyFilters"
           >
             <option value="">All sources</option>
@@ -76,7 +76,7 @@
           </select>
           <select
             v-model="selectedSort"
-            class="rounded-lg border border-(--color-border) bg-(--color-surface) px-3 py-2 text-sm text-(--color-text-primary) focus:border-blue-500 focus:outline-none"
+            class="rounded-lg border border-(--color-border) bg-(--color-surface) px-3 py-2 text-sm text-(--color-text-primary) focus:border-emerald-500 focus:outline-none"
             @change="applyFilters"
           >
             <option value="mrr-desc">MRR ↓</option>

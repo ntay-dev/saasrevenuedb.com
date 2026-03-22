@@ -1,26 +1,28 @@
 <template>
   <div>
-    <header class="bg-white border-b border-gray-200">
+    <div class="border-b border-(--color-border) bg-(--color-surface)">
       <div class="mx-auto max-w-7xl px-4 py-4 sm:px-6 lg:px-8">
         <NuxtLink
           to="/"
-          class="inline-flex items-center gap-1 text-sm text-gray-500 hover:text-gray-700"
+          class="inline-flex items-center gap-1 text-sm text-(--color-text-muted) transition-colors hover:text-(--color-text-secondary)"
         >
           <ArrowLeft class="size-3" />
-          Back to overview
+          Back
         </NuxtLink>
       </div>
-    </header>
+    </div>
 
     <main class="mx-auto max-w-3xl px-4 py-12 sm:px-6 lg:px-8">
-      <h1 class="text-3xl font-bold text-gray-900 mb-2">
+      <h1 class="mb-2 text-3xl font-bold text-(--color-text-primary)">
         Allgemeine Geschäftsbedingungen (AGB)
       </h1>
-      <p class="text-sm text-gray-500 mb-8">Stand: März 2026</p>
+      <p class="mb-8 text-sm text-(--color-text-muted)">Stand: März 2026</p>
 
-      <div class="space-y-8 text-gray-700 leading-relaxed">
+      <div
+        class="space-y-8 leading-relaxed text-(--color-text-secondary)"
+      >
         <section>
-          <h2 class="text-xl font-bold text-gray-900 mb-3">
+          <h2 class="mb-3 text-xl font-bold text-(--color-text-primary)">
             § 1 Geltungsbereich
           </h2>
           <p>
@@ -31,7 +33,7 @@
         </section>
 
         <section>
-          <h2 class="text-xl font-bold text-gray-900 mb-3">
+          <h2 class="mb-3 text-xl font-bold text-(--color-text-primary)">
             § 2 Leistungsbeschreibung
           </h2>
           <p>
@@ -48,14 +50,14 @@
         </section>
 
         <section>
-          <h2 class="text-xl font-bold text-gray-900 mb-3">
+          <h2 class="mb-3 text-xl font-bold text-(--color-text-primary)">
             § 3 Datenaggregation und Quellenangaben
           </h2>
           <p>
             Die auf dieser Website dargestellten Daten stammen aus öffentlich
             zugänglichen Quellen, darunter:
           </p>
-          <ul class="mt-2 list-disc pl-6 space-y-1">
+          <ul class="mt-2 list-disc space-y-1 pl-6">
             <li>Offizielle Unternehmenswebsites</li>
             <li>
               Öffentliche APIs und Datenbanken (z.B. TrustMRR, Crunchbase)
@@ -78,7 +80,7 @@
         </section>
 
         <section>
-          <h2 class="text-xl font-bold text-gray-900 mb-3">
+          <h2 class="mb-3 text-xl font-bold text-(--color-text-primary)">
             § 4 Urheberrecht und geistiges Eigentum
           </h2>
           <p>
@@ -107,7 +109,7 @@
         </section>
 
         <section>
-          <h2 class="text-xl font-bold text-gray-900 mb-3">
+          <h2 class="mb-3 text-xl font-bold text-(--color-text-primary)">
             § 5 Korrektur- und Löschungsanfragen
           </h2>
           <p>
@@ -116,7 +118,7 @@
             sind per E-Mail an
             <a
               href="mailto:contact@indie-radar.com"
-              class="text-blue-600 hover:underline"
+              class="text-blue-400 hover:underline"
               >contact@indie-radar.com</a
             >
             zu richten.
@@ -125,7 +127,7 @@
             Der Betreiber bearbeitet berechtigte Anfragen innerhalb von 14
             Werktagen. Insbesondere werden wir:
           </p>
-          <ul class="mt-2 list-disc pl-6 space-y-1">
+          <ul class="mt-2 list-disc space-y-1 pl-6">
             <li>
               Nachweislich falsche Informationen umgehend korrigieren oder
               entfernen
@@ -139,11 +141,11 @@
         </section>
 
         <section>
-          <h2 class="text-xl font-bold text-gray-900 mb-3">
+          <h2 class="mb-3 text-xl font-bold text-(--color-text-primary)">
             § 6 Haftungsbeschränkung
           </h2>
           <p>Der Betreiber haftet nicht für:</p>
-          <ul class="mt-2 list-disc pl-6 space-y-1">
+          <ul class="mt-2 list-disc space-y-1 pl-6">
             <li>
               Unrichtigkeit, Unvollständigkeit oder mangelnde Aktualität der
               dargestellten Daten
@@ -163,7 +165,7 @@
         </section>
 
         <section>
-          <h2 class="text-xl font-bold text-gray-900 mb-3">
+          <h2 class="mb-3 text-xl font-bold text-(--color-text-primary)">
             § 7 Nutzung durch Dritte / Scraping
           </h2>
           <p>
@@ -180,7 +182,7 @@
         </section>
 
         <section>
-          <h2 class="text-xl font-bold text-gray-900 mb-3">
+          <h2 class="mb-3 text-xl font-bold text-(--color-text-primary)">
             § 8 Änderungen der AGB
           </h2>
           <p>
@@ -192,7 +194,7 @@
         </section>
 
         <section>
-          <h2 class="text-xl font-bold text-gray-900 mb-3">
+          <h2 class="mb-3 text-xl font-bold text-(--color-text-primary)">
             § 9 Anwendbares Recht und Gerichtsstand
           </h2>
           <p>
@@ -203,7 +205,7 @@
         </section>
 
         <section>
-          <h2 class="text-xl font-bold text-gray-900 mb-3">
+          <h2 class="mb-3 text-xl font-bold text-(--color-text-primary)">
             § 10 Salvatorische Klausel
           </h2>
           <p>

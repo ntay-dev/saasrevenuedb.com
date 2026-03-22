@@ -29,7 +29,7 @@
           {{ description }}
         </p>
         <button
-          class="mt-8 inline-flex items-center gap-2 rounded-lg bg-blue-600 px-5 py-2.5 text-sm font-medium text-white transition-colors hover:bg-blue-700"
+          class="mt-8 inline-flex items-center gap-2 rounded-lg bg-emerald-600 px-5 py-2.5 text-sm font-medium text-white transition-colors hover:bg-emerald-700"
           @click="handleError"
         >
           <ArrowLeft class="size-4" />

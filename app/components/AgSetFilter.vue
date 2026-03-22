@@ -134,7 +134,7 @@ defineExpose({ doesFilterPass, isFilterActive, getModel, setModel });
 }
 
 .ag-set-filter-input:focus {
-  border-color: #3b82f6;
+  border-color: #10b981;
 }
 
 .ag-set-filter-actions {
@@ -180,7 +180,7 @@ defineExpose({ doesFilterPass, isFilterActive, getModel, setModel });
 }
 
 .ag-set-filter-item input[type="checkbox"] {
-  accent-color: #3b82f6;
+  accent-color: #10b981;
   cursor: pointer;
 }
 

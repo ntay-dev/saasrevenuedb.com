@@ -2,12 +2,12 @@
   <div>
     <!-- Back nav -->
     <div
-      class="border-b border-[var(--color-border)] bg-[var(--color-surface)]"
+      class="border-b border-(--color-border) bg-(--color-surface)"
     >
       <div class="mx-auto max-w-7xl px-4 py-3 sm:px-6 lg:px-8">
         <NuxtLink
           to="/"
-          class="inline-flex items-center gap-1.5 text-sm text-[var(--color-text-muted)] transition-colors hover:text-[var(--color-text-secondary)]"
+          class="inline-flex items-center gap-1.5 text-sm text-(--color-text-muted) transition-colors hover:text-(--color-text-secondary)"
         >
           <ArrowLeft class="size-4" />
           Back to Database
@@ -50,17 +50,17 @@
     >
       <div class="mx-auto max-w-md">
         <Search
-          class="mx-auto mb-4 size-12 text-[var(--color-text-muted)] opacity-30"
+          class="mx-auto mb-4 size-12 text-(--color-text-muted) opacity-30"
         />
-        <h2 class="text-xl font-semibold text-[var(--color-text-primary)]">
+        <h2 class="text-xl font-semibold text-(--color-text-primary)">
           Product not found
         </h2>
-        <p class="mt-2 text-sm text-[var(--color-text-muted)]">
+        <p class="mt-2 text-sm text-(--color-text-muted)">
           This SaaS product doesn't exist in our database.
         </p>
         <NuxtLink
           to="/"
-          class="mt-6 inline-flex items-center gap-1.5 rounded-lg bg-blue-600 px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-blue-700"
+          class="mt-6 inline-flex items-center gap-1.5 rounded-lg bg-emerald-600 px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-emerald-700"
         >
           <ArrowLeft class="size-4" />
           Back to Database
@@ -77,14 +77,14 @@
           <div class="card p-6">
             <div class="flex items-start gap-4">
               <div
-                class="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-blue-500/20 to-indigo-500/20 text-xl font-bold text-blue-400 ring-1 ring-white/10"
+                class="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-emerald-500/10 text-xl font-bold text-emerald-400 ring-1 ring-white/5"
               >
                 {{ product.name.charAt(0) }}
               </div>
               <div class="min-w-0 flex-1">
                 <div class="flex items-center gap-3">
                   <h1
-                    class="text-2xl font-bold text-[var(--color-text-primary)]"
+                    class="text-2xl font-bold text-(--color-text-primary)"
                   >
                     {{ product.name }}
                   </h1>
@@ -92,7 +92,7 @@
                 </div>
                 <p
                   v-if="product.company"
-                  class="mt-0.5 text-sm text-[var(--color-text-secondary)]"
+                  class="mt-0.5 text-sm text-(--color-text-secondary)"
                 >
                   {{ product.company }}
                 </p>
@@ -104,7 +104,7 @@
                   :href="product.website_url"
                   target="_blank"
                   rel="noopener noreferrer"
-                  class="flex h-9 w-9 items-center justify-center rounded-lg border border-[var(--color-border)] text-[var(--color-text-muted)] transition-all hover:border-blue-500/30 hover:text-blue-400"
+                  class="flex h-9 w-9 items-center justify-center rounded-lg border border-(--color-border) text-(--color-text-muted) transition-all hover:border-blue-500/30 hover:text-blue-400"
                   title="Website"
                 >
                   <ExternalLink class="size-3.5" />
@@ -114,7 +114,7 @@
                   :href="product.trustmrr_url"
                   target="_blank"
                   rel="noopener noreferrer"
-                  class="flex h-9 w-9 items-center justify-center rounded-lg border border-[var(--color-border)] text-[var(--color-text-muted)] transition-all hover:border-green-500/30 hover:text-green-400"
+                  class="flex h-9 w-9 items-center justify-center rounded-lg border border-(--color-border) text-(--color-text-muted) transition-all hover:border-green-500/30 hover:text-green-400"
                   title="TrustMRR"
                 >
                   <BadgeCheck class="size-3.5" />
@@ -124,7 +124,7 @@
 
             <p
               v-if="product.description"
-              class="mt-5 text-sm leading-relaxed text-[var(--color-text-secondary)]"
+              class="mt-5 text-sm leading-relaxed text-(--color-text-secondary)"
             >
               {{ product.description }}
             </p>
@@ -132,7 +132,7 @@
             <!-- Founders -->
             <div v-if="founders.length > 0" class="mt-6">
               <h3
-                class="mb-3 text-xs font-medium uppercase tracking-wider text-[var(--color-text-muted)]"
+                class="mb-3 text-xs font-medium uppercase tracking-wider text-(--color-text-muted)"
               >
                 Founders
               </h3>
@@ -214,12 +214,12 @@
           <div class="card p-6">
             <div class="flex items-center justify-between">
               <h2
-                class="text-sm font-semibold text-[var(--color-text-primary)]"
+                class="text-sm font-semibold text-(--color-text-primary)"
               >
                 Sources & Provenance
               </h2>
               <span
-                class="rounded-full bg-[var(--color-surface-elevated)] px-2 py-0.5 text-xs tabular-nums text-[var(--color-text-muted)]"
+                class="rounded-full bg-(--color-surface-elevated) px-2 py-0.5 text-xs tabular-nums text-(--color-text-muted)"
               >
                 {{ dataPoints.length }}
               </span>
@@ -227,7 +227,7 @@
 
             <div
               v-if="dataPoints.length === 0"
-              class="mt-6 text-center text-sm text-[var(--color-text-muted)]"
+              class="mt-6 text-center text-sm text-(--color-text-muted)"
             >
               No sources available
             </div>
@@ -237,11 +237,11 @@
               <div
                 v-for="(group, fieldName) in groupedDataPoints"
                 :key="fieldName"
-                class="rounded-xl border border-[var(--color-border)] bg-[var(--color-surface-elevated)] p-3"
+                class="rounded-xl border border-(--color-border) bg-(--color-surface-elevated) p-3"
               >
                 <div class="flex items-center justify-between gap-2">
                   <span
-                    class="text-[0.65rem] font-medium uppercase tracking-wider text-[var(--color-text-muted)]"
+                    class="text-[0.65rem] font-medium uppercase tracking-wider text-(--color-text-muted)"
                   >
                     {{ fieldLabels[fieldName] || fieldName }}
                   </span>
@@ -258,16 +258,16 @@
                   :key="dp.id"
                   :class="
                     idx > 0
-                      ? 'mt-2 border-t border-[var(--color-border)] pt-2'
+                      ? 'mt-2 border-t border-(--color-border) pt-2'
                       : 'mt-1'
                   "
                 >
-                  <p class="text-sm text-[var(--color-text-primary)]">
+                  <p class="text-sm text-(--color-text-primary)">
                     {{ truncateValue(dp.field_value) }}
                   </p>
                   <div
                     v-if="dp.source"
-                    class="mt-1.5 flex flex-wrap items-center gap-1.5 text-[0.65rem] text-[var(--color-text-muted)]"
+                    class="mt-1.5 flex flex-wrap items-center gap-1.5 text-[0.65rem] text-(--color-text-muted)"
                   >
                     <TrustBadge
                       :level="dp.source.trust_level"
@@ -291,8 +291,8 @@
             </div>
 
             <!-- Trust system info -->
-            <div class="mt-4 border-t border-[var(--color-border)] pt-4">
-              <p class="text-xs text-[var(--color-text-muted)]">
+            <div class="mt-4 border-t border-(--color-border) pt-4">
+              <p class="text-xs text-(--color-text-muted)">
                 Trust levels: 90+ official sources, 85+ verified APIs, 70+
                 public platforms, &lt;70 community data.
               </p>
