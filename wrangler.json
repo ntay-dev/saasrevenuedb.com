@@ -1,12 +1,12 @@
 {
   "$schema": "./node_modules/wrangler/config-schema.json",
-  "name": "indie-radar-com",
+  "name": "saasrevenuedb-com",
   "pages_build_output_dir": "./dist",
   "compatibility_date": "2026-03-01",
   "compatibility_flags": ["nodejs_compat"],
   "vars": {
     "NODE_VERSION": "22",
-    "NUXT_PUBLIC_BASE_URL": "https://indie-radar.com",
+    "NUXT_PUBLIC_BASE_URL": "https://saasrevenuedb.com",
     "NUXT_PUBLIC_SUPABASE_URL": "https://wenerrewidsepasvnlft.supabase.co",
     "NUXT_PUBLIC_SUPABASE_ANON_KEY": "sb_publishable_SgdJbG7M0pEfZQRDEPJsdg_r5d4ai32"
   }

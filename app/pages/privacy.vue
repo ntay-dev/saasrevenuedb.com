@@ -32,9 +32,9 @@
             <p>
               E-Mail:
               <a
-                href="mailto:contact@indie-radar.com"
+                href="mailto:contact@saasrevenuedb.com"
                 class="text-blue-400 hover:underline"
-                >contact@indie-radar.com</a
+                >contact@saasrevenuedb.com</a
               >
             </p>
           </div>
@@ -45,7 +45,7 @@
             2. Art und Zweck der Datenverarbeitung
           </h2>
           <p>
-            indie-radar.com ist eine öffentlich zugängliche
+            saasrevenuedb.com ist eine öffentlich zugängliche
             Informationsdatenbank über SaaS-Produkte. Die Website aggregiert
             ausschließlich
             <strong>öffentlich verfügbare Unternehmensdaten</strong> aus
@@ -115,9 +115,9 @@
             <strong>Recht auf Löschung:</strong> Betroffene Personen können
             jederzeit die Entfernung ihrer Daten per E-Mail an
             <a
-              href="mailto:contact@indie-radar.com"
+              href="mailto:contact@saasrevenuedb.com"
               class="text-blue-400 hover:underline"
-              >contact@indie-radar.com</a
+              >contact@saasrevenuedb.com</a
             >
             beantragen. Wir kommen berechtigten Löschungsanfragen unverzüglich
             nach.
@@ -207,9 +207,9 @@
           <p class="mt-2">
             Anfragen richten Sie bitte an:
             <a
-              href="mailto:contact@indie-radar.com"
+              href="mailto:contact@saasrevenuedb.com"
               class="text-blue-400 hover:underline"
-              >contact@indie-radar.com</a
+              >contact@saasrevenuedb.com</a
             >
           </p>
         </section>
@@ -243,9 +243,9 @@
             und möchten Informationen korrigieren, ergänzen oder entfernen
             lassen? Kontaktieren Sie uns unter
             <a
-              href="mailto:contact@indie-radar.com"
+              href="mailto:contact@saasrevenuedb.com"
               class="text-blue-400 hover:underline"
-              >contact@indie-radar.com</a
+              >contact@saasrevenuedb.com</a
             >. Wir bearbeiten berechtigte Anfragen zeitnah.
           </p>
         </section>
@@ -258,11 +258,11 @@
 import { ArrowLeft } from "lucide-vue-next";
 
 useHead({
-  title: "Datenschutzerklärung — IndieRadar",
+  title: "Datenschutzerklärung — SaaSRevenueDB",
   meta: [
     {
       name: "description",
-      content: "Datenschutzerklärung von indie-radar.com — DSGVO-konform",
+      content: "Datenschutzerklärung von saasrevenuedb.com — DSGVO-konform",
     },
   ],
 });

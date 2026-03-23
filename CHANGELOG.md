@@ -1,6 +1,6 @@
 # Changelog
 
-All notable changes to indie-radar.com are documented here.
+All notable changes to saasrevenuedb.com are documented here.
 
 ## [1.2.2] - 2026-03-22
 
@@ -54,6 +54,7 @@ All notable changes to indie-radar.com are documented here.
 ## [0.9.0] - 2026-03-22 — Rebrand to IndieRadar
 
 - Full rebrand from saas-products.com to IndieRadar (indie-radar.com)
+- Note: Later rebranded to SaaSRevenueDB (saasrevenuedb.com) in v1.3.0
 - New radar-inspired logo, emerald/cyan color scheme
 - New landing page with insight dashboard
 - Product list moved from `/` to `/products`

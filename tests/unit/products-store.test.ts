@@ -13,7 +13,7 @@ describe("products store", () => {
     vi.clearAllMocks();
     // Clear localStorage cache
     try {
-      localStorage.removeItem("saas-products-cache");
+      localStorage.removeItem("saasrevenuedb-cache");
     } catch {
       // ignore
     }

@@ -17,7 +17,7 @@
           <span
             class="text-lg font-semibold tracking-tight text-(--color-text-primary)"
           >
-            Indie<span class="text-emerald-500">Radar</span>
+            SaaS<span class="text-emerald-500">RevenueDB</span>
           </span>
         </NuxtLink>
 
@@ -110,7 +110,7 @@
           <div
             class="flex items-center gap-2 text-sm text-(--color-text-muted)"
           >
-            <span>&copy; {{ new Date().getFullYear() }} IndieRadar</span>
+            <span>&copy; {{ new Date().getFullYear() }} SaaSRevenueDB</span>
             <span class="text-white/10">|</span>
             <span class="text-xs">
               v{{ config.public.appVersion }} · built

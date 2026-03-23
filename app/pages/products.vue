@@ -224,7 +224,7 @@ const sourcesWithProducts = computed(() => {
 });
 
 useHead({
-  title: "Products — IndieRadar",
+  title: "Products — SaaSRevenueDB",
   meta: [
     {
       name: "description",

@@ -30,7 +30,7 @@
             Browse Products
           </NuxtLink>
           <a
-            href="https://github.com/ntay-dev/indie-radar.com"
+            href="https://github.com/ntay-dev/saasrevenuedb.com"
             target="_blank"
             rel="noopener noreferrer"
             class="inline-flex items-center gap-2 rounded-lg border border-(--color-border) bg-(--color-surface-elevated) px-5 py-2.5 text-sm font-medium text-(--color-text-secondary) transition-colors hover:border-(--color-border-hover) hover:text-(--color-text-primary)"
@@ -418,7 +418,7 @@
         </p>
         <div class="mt-4 flex flex-wrap items-center justify-center gap-3">
           <a
-            href="https://github.com/ntay-dev/indie-radar.com"
+            href="https://github.com/ntay-dev/saasrevenuedb.com"
             target="_blank"
             rel="noopener noreferrer"
             class="inline-flex items-center gap-2 rounded-lg border border-(--color-border) bg-(--color-surface) px-4 py-2 text-sm font-medium text-(--color-text-secondary) transition-colors hover:text-(--color-text-primary)"
@@ -454,7 +454,7 @@ const store = useProductsStore();
 const ready = ref(false);
 
 useHead({
-  title: "IndieRadar — Discover SaaS Markets & Revenue",
+  title: "SaaSRevenueDB — The Open SaaS Revenue Database",
   meta: [
     {
       name: "description",

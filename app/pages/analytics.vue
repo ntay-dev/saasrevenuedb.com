@@ -176,7 +176,7 @@ import { formatCompact, formatCurrency } from "~/utils/format";
 ModuleRegistry.registerModules([AllCommunityModule]);
 
 useHead({
-  title: "Analytics — IndieRadar",
+  title: "Analytics — SaaSRevenueDB",
   meta: [{ name: "robots", content: "noindex, nofollow" }],
 });
 

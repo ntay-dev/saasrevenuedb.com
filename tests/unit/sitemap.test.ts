@@ -40,7 +40,7 @@ describe("sitemap.xml route handler", () => {
 
   it("includes homepage URL", async () => {
     const result = await sitemapHandler(mockEvent);
-    expect(result).toContain("<loc>https://indie-radar.com/</loc>");
+    expect(result).toContain("<loc>https://saasrevenuedb.com/</loc>");
   });
 
   it("sets homepage priority to 1.0", async () => {
@@ -53,17 +53,17 @@ describe("sitemap.xml route handler", () => {
 
   it("includes impressum page", async () => {
     const result = await sitemapHandler(mockEvent);
-    expect(result).toContain("<loc>https://indie-radar.com/impressum</loc>");
+    expect(result).toContain("<loc>https://saasrevenuedb.com/impressum</loc>");
   });
 
   it("includes privacy page", async () => {
     const result = await sitemapHandler(mockEvent);
-    expect(result).toContain("<loc>https://indie-radar.com/privacy</loc>");
+    expect(result).toContain("<loc>https://saasrevenuedb.com/privacy</loc>");
   });
 
   it("includes terms page", async () => {
     const result = await sitemapHandler(mockEvent);
-    expect(result).toContain("<loc>https://indie-radar.com/terms</loc>");
+    expect(result).toContain("<loc>https://saasrevenuedb.com/terms</loc>");
   });
 
   it("sets static page priority to 0.3", async () => {
@@ -79,13 +79,13 @@ describe("sitemap.xml route handler", () => {
   it("includes product URLs from database", async () => {
     const result = await sitemapHandler(mockEvent);
     expect(result).toContain(
-      "<loc>https://indie-radar.com/products/notion</loc>",
+      "<loc>https://saasrevenuedb.com/products/notion</loc>",
     );
     expect(result).toContain(
-      "<loc>https://indie-radar.com/products/slack</loc>",
+      "<loc>https://saasrevenuedb.com/products/slack</loc>",
     );
     expect(result).toContain(
-      "<loc>https://indie-radar.com/products/figma</loc>",
+      "<loc>https://saasrevenuedb.com/products/figma</loc>",
     );
   });
 
@@ -120,7 +120,7 @@ describe("sitemap.xml with no products", () => {
     const result = await sitemapHandler({});
     expect(result).toContain("</urlset>");
     // Static pages should still be present
-    expect(result).toContain("<loc>https://indie-radar.com/</loc>");
+    expect(result).toContain("<loc>https://saasrevenuedb.com/</loc>");
     // No product URLs should appear
     expect(result).not.toContain("/products/notion");
   });
@@ -145,7 +145,7 @@ describe("sitemap.xml with updated_at", () => {
 
     const result = await sitemapHandler({});
     expect(result).toContain(
-      "<loc>https://indie-radar.com/products/notion</loc>",
+      "<loc>https://saasrevenuedb.com/products/notion</loc>",
     );
     expect(result).toContain("<lastmod>2025-06-15</lastmod>");
   });

@@ -1,4 +1,4 @@
-# CLAUDE.md — IndieRadar (saas-products.com)
+# CLAUDE.md — SaaSRevenueDB (saasrevenuedb.com)
 
 ## Vision
 
@@ -10,7 +10,7 @@ Nuxt 4 (SPA), Vue 3, TypeScript, Tailwind CSS 4, shadcn-vue + Reka UI, Supabase,
 
 ## Repo
 
-- **GitHub:** `ntay-dev/saas-products.com`
+- **GitHub:** `ntay-dev/saasrevenuedb.com`
 
 ## Supabase Connection
 

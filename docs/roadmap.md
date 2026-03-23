@@ -1,4 +1,4 @@
-# IndieRadar — Roadmap
+# SaaSRevenueDB — Roadmap
 
 > **Current focus: S1 (Ship It)** — Complete search, filters, and trust system, deploy and validate as first user
 
@@ -33,7 +33,7 @@ Nuxt 4 (SPA), Vue 3, TypeScript, Tailwind CSS 4, shadcn-vue, Supabase, Pinia, i1
 
 ### S2: Scale It — Acquire free users (without monetization)
 
-> SEO, content, marketing — bring users to the platform before money flows. For saas-products.com the product itself is already free.
+> SEO, content, marketing — bring users to the platform before money flows. For saasrevenuedb.com the product itself is already free.
 
 **What belongs to S2:**
 
@@ -174,9 +174,9 @@ Nuxt 4 (SPA), Vue 3, TypeScript, Tailwind CSS 4, shadcn-vue, Supabase, Pinia, i1
 
 ### S2 Future: MCP Integration (Model Context Protocol)
 
-> saas-products.com as MCP server: AI assistants can search the SaaS database and retrieve product data.
+> saasrevenuedb.com as MCP server: AI assistants can search the SaaS database and retrieve product data.
 
-- [ ] Implement MCP server (`@saas-products/mcp-server`)
+- [ ] Implement MCP server (`@saasrevenuedb/mcp-server`)
 - [ ] Tools: `search-products`, `get-product`, `list-categories`, `compare-products`, `get-market-stats`
 - [ ] Resources: Product data, category overviews, and market statistics as AI context
 - [ ] Auth: Public (read-only) + API key for extended queries
@@ -189,7 +189,7 @@ Nuxt 4 (SPA), Vue 3, TypeScript, Tailwind CSS 4, shadcn-vue, Supabase, Pinia, i1
 ### Post-MLP: Features
 
 - API for third parties (`/api/v1/products`)
-- Embeddable widgets (badges: "Listed on IndieRadar")
+- Embeddable widgets (badges: "Listed on SaaSRevenueDB")
 - Community contributions (users can suggest corrections)
 - Trend analysis (employee growth over time)
 - SaaS stack analysis (which tools do companies use together?)

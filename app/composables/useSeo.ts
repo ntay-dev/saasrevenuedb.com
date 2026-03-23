@@ -1,4 +1,4 @@
-const BASE_URL = "https://indie-radar.com";
+const BASE_URL = "https://saasrevenuedb.com";
 
 /** Inject a JSON-LD script block via useHead */
 export function useJsonLd(
@@ -25,13 +25,13 @@ export function useOrganizationSchema() {
   useJsonLd({
     "@context": "https://schema.org",
     "@type": "Organization",
-    name: "IndieRadar",
+    name: "SaaSRevenueDB",
     url: BASE_URL,
     logo: `${BASE_URL}/favicon.svg`,
     description:
       "Open-source SaaS revenue database with verified MRR data and founder insights. Free forever.",
     sameAs: [
-      "https://github.com/ntay-dev/indie-radar.com",
+      "https://github.com/ntay-dev/saasrevenuedb.com",
       "https://x.com/ntay_dev",
     ],
   });
@@ -42,7 +42,7 @@ export function useWebSiteSchema() {
   useJsonLd({
     "@context": "https://schema.org",
     "@type": "WebSite",
-    name: "IndieRadar",
+    name: "SaaSRevenueDB",
     url: BASE_URL,
     description:
       "Discover SaaS markets, verified MRR data, and founder insights. Free forever.",

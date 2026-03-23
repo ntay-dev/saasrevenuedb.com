@@ -1,4 +1,4 @@
-project_id = "saas-products"
+project_id = "saasrevenuedb"
 
 [api]
 enabled = true

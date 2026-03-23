@@ -61,8 +61,8 @@ describe("useSeo", () => {
       expect(capturedHeadCalls).toHaveLength(1);
       const json = capturedHeadCalls[0].script[0].innerHTML;
       expect(json).toContain('"@type":"Organization"');
-      expect(json).toContain("IndieRadar");
-      expect(json).toContain("https://indie-radar.com");
+      expect(json).toContain("SaaSRevenueDB");
+      expect(json).toContain("https://saasrevenuedb.com");
     });
   });
 
@@ -92,7 +92,7 @@ describe("useSeo", () => {
     it("prepends base URL for relative paths", () => {
       useBreadcrumbSchema([{ name: "Home", url: "/" }]);
       const json = capturedHeadCalls[0].script[0].innerHTML;
-      expect(json).toContain("https://indie-radar.com/");
+      expect(json).toContain("https://saasrevenuedb.com/");
     });
 
     it("keeps absolute URLs as-is", () => {
@@ -102,7 +102,9 @@ describe("useSeo", () => {
       const json = capturedHeadCalls[0].script[0].innerHTML;
       expect(json).toContain("https://example.com/page");
       // Should NOT double-prefix
-      expect(json).not.toContain("https://indie-radar.comhttps://example.com");
+      expect(json).not.toContain(
+        "https://saasrevenuedb.comhttps://example.com",
+      );
     });
   });
 
@@ -140,7 +142,7 @@ describe("useSeo", () => {
       }));
       const script = capturedHeadCalls[0].script[0];
       const value = script.innerHTML.value;
-      expect(value).toContain("https://indie-radar.com/products/nourl");
+      expect(value).toContain("https://saasrevenuedb.com/products/nourl");
     });
 
     it("uses default category SaaS when not provided", () => {
@@ -231,7 +233,7 @@ describe("useSeo", () => {
       useCanonical("/products");
       const link = capturedHeadCalls[0].link[0];
       expect(link.rel).toBe("canonical");
-      expect(link.href).toBe("https://indie-radar.com/products");
+      expect(link.href).toBe("https://saasrevenuedb.com/products");
     });
 
     it("keeps absolute URL as-is", () => {
@@ -244,7 +246,7 @@ describe("useSeo", () => {
       useCanonical(() => "/dynamic-path");
       const link = capturedHeadCalls[0].link[0];
       // href should be a computed ref
-      expect(link.href.value).toBe("https://indie-radar.com/dynamic-path");
+      expect(link.href.value).toBe("https://saasrevenuedb.com/dynamic-path");
     });
 
     it("handles function path returning absolute URL", () => {

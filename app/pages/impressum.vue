@@ -45,9 +45,9 @@
             <p>
               E-Mail:
               <a
-                href="mailto:contact@indie-radar.com"
+                href="mailto:contact@saasrevenuedb.com"
                 class="text-blue-400 hover:underline"
-                >contact@indie-radar.com</a
+                >contact@saasrevenuedb.com</a
               >
             </p>
           </div>
@@ -155,11 +155,11 @@
 import { ArrowLeft } from "lucide-vue-next";
 
 useHead({
-  title: "Impressum — IndieRadar",
+  title: "Impressum — SaaSRevenueDB",
   meta: [
     {
       name: "description",
-      content: "Impressum von indie-radar.com — Angaben gemäß § 5 DDG",
+      content: "Impressum von saasrevenuedb.com — Angaben gemäß § 5 DDG",
     },
   ],
 });

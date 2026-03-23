@@ -1,7 +1,7 @@
 import { createClient } from "@supabase/supabase-js";
 
 export default defineEventHandler(async (event) => {
-  const baseUrl = "https://indie-radar.com";
+  const baseUrl = "https://saasrevenuedb.com";
   const config = useRuntimeConfig();
   const today = new Date().toISOString().split("T")[0];
 

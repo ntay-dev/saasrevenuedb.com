@@ -13,7 +13,7 @@
           <span
             class="text-lg font-semibold tracking-tight text-(--color-text-primary)"
           >
-            Indie<span class="text-emerald-500">Radar</span>
+            SaaS<span class="text-emerald-500">RevenueDB</span>
           </span>
         </NuxtLink>
       </div>
@@ -41,7 +41,7 @@
     <footer class="border-t border-(--color-border) bg-(--color-surface)">
       <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
         <p class="text-center text-sm text-(--color-text-muted)">
-          &copy; {{ new Date().getFullYear() }} IndieRadar
+          &copy; {{ new Date().getFullYear() }} SaaSRevenueDB
         </p>
       </div>
     </footer>
@@ -76,6 +76,6 @@ function handleError() {
 }
 
 useHead({
-  title: `${statusCode.value} — IndieRadar`,
+  title: `${statusCode.value} — SaaSRevenueDB`,
 });
 </script>

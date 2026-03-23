@@ -1,4 +1,4 @@
-# IndieRadar Design System
+# SaaSRevenueDB Design System
 
 Dark-mode analytics dashboard aesthetic. No light mode.
 
@@ -137,7 +137,7 @@ hover:shadow-lg hover:shadow-black/20
 shadow-lg shadow-emerald-500/25
 ```
 
-Used on the IndieRadar logo icon.
+Used on the SaaSRevenueDB logo icon.
 
 ### Stat Card Glow Effects
 

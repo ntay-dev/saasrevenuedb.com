@@ -328,7 +328,7 @@ useHead(
     const description =
       product.value.description ||
       `${name}${company ? ` by ${company}` : ""} — SaaS product with verified revenue, growth and source data.`;
-    const pageUrl = `https://indie-radar.com/products/${slug}`;
+    const pageUrl = `https://saasrevenuedb.com/products/${slug}`;
     return {
       title: `${name} — SaaS Products`,
       meta: [
@@ -339,7 +339,7 @@ useHead(
         { property: "og:type", content: "website" },
         {
           property: "og:image",
-          content: "https://indie-radar.com/og-image.png",
+          content: "https://saasrevenuedb.com/og-image.png",
         },
         { name: "twitter:card", content: "summary_large_image" },
         { name: "twitter:title", content: `${name} — SaaS Products` },

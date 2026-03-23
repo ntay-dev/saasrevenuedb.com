@@ -25,7 +25,7 @@
           </h2>
           <p>
             Diese Allgemeinen Geschäftsbedingungen gelten für die Nutzung der
-            Website indie-radar.com (nachfolgend „Dienst"), betrieben von Enes
+            Website saasrevenuedb.com (nachfolgend „Dienst"), betrieben von Enes
             Kayali, Friedrich-Heene-Straße 7, 67061 Ludwigshafen am Rhein.
           </p>
         </section>
@@ -115,9 +115,9 @@
             Ergänzung oder Entfernung von Informationen beantragen. Anfragen
             sind per E-Mail an
             <a
-              href="mailto:contact@indie-radar.com"
+              href="mailto:contact@saasrevenuedb.com"
               class="text-blue-400 hover:underline"
-              >contact@indie-radar.com</a
+              >contact@saasrevenuedb.com</a
             >
             zu richten.
           </p>
@@ -223,11 +223,11 @@
 import { ArrowLeft } from "lucide-vue-next";
 
 useHead({
-  title: "AGB — IndieRadar",
+  title: "AGB — SaaSRevenueDB",
   meta: [
     {
       name: "description",
-      content: "Allgemeine Geschäftsbedingungen von indie-radar.com",
+      content: "Allgemeine Geschäftsbedingungen von saasrevenuedb.com",
     },
   ],
 });

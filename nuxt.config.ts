@@ -33,7 +33,7 @@ export default defineNuxtConfig({
     public: {
       appVersion: packageJson.version,
       buildTime: new Date().toISOString(),
-      baseUrl: process.env.NUXT_PUBLIC_BASE_URL || "https://indie-radar.com",
+      baseUrl: process.env.NUXT_PUBLIC_BASE_URL || "https://saasrevenuedb.com",
       supabaseUrl: process.env.NUXT_PUBLIC_SUPABASE_URL || "",
       supabaseKey: process.env.NUXT_PUBLIC_SUPABASE_ANON_KEY || "",
     },
@@ -41,7 +41,7 @@ export default defineNuxtConfig({
   css: ["./app/assets/css/main.css"],
   app: {
     head: {
-      title: "IndieRadar — Discover SaaS Markets & Revenue",
+      title: "SaaSRevenueDB — The Open SaaS Revenue Database",
       htmlAttrs: {
         lang: "en",
       },
@@ -56,11 +56,11 @@ export default defineNuxtConfig({
         { name: "theme-color", content: "#10b981" },
         { name: "msapplication-TileColor", content: "#10b981" },
         { property: "og:type", content: "website" },
-        { property: "og:site_name", content: "IndieRadar" },
-        { property: "og:url", content: "https://indie-radar.com" },
+        { property: "og:site_name", content: "SaaSRevenueDB" },
+        { property: "og:url", content: "https://saasrevenuedb.com" },
         {
           property: "og:title",
-          content: "IndieRadar — Discover SaaS Markets & Revenue",
+          content: "SaaSRevenueDB — The Open SaaS Revenue Database",
         },
         {
           property: "og:description",
@@ -69,17 +69,17 @@ export default defineNuxtConfig({
         },
         {
           property: "og:image",
-          content: "https://indie-radar.com/og-image.png",
+          content: "https://saasrevenuedb.com/og-image.png",
         },
         { property: "og:image:width", content: "1200" },
         { property: "og:image:height", content: "630" },
         { property: "og:image:type", content: "image/png" },
         { name: "twitter:card", content: "summary_large_image" },
         { name: "twitter:site", content: "@ntay_dev" },
-        { name: "twitter:url", content: "https://indie-radar.com" },
+        { name: "twitter:url", content: "https://saasrevenuedb.com" },
         {
           name: "twitter:title",
-          content: "IndieRadar — Discover SaaS Markets & Revenue",
+          content: "SaaSRevenueDB — The Open SaaS Revenue Database",
         },
         {
           name: "twitter:description",
@@ -88,7 +88,7 @@ export default defineNuxtConfig({
         },
         {
           name: "twitter:image",
-          content: "https://indie-radar.com/og-image.png",
+          content: "https://saasrevenuedb.com/og-image.png",
         },
       ],
       script: [
@@ -117,16 +117,16 @@ export default defineNuxtConfig({
           href: "/apple-touch-icon.png",
         },
         { rel: "manifest", href: "/site.webmanifest" },
-        { rel: "canonical", href: "https://indie-radar.com" },
+        { rel: "canonical", href: "https://saasrevenuedb.com" },
         {
           rel: "alternate",
           hreflang: "en",
-          href: "https://indie-radar.com",
+          href: "https://saasrevenuedb.com",
         },
         {
           rel: "alternate",
           hreflang: "x-default",
-          href: "https://indie-radar.com",
+          href: "https://saasrevenuedb.com",
         },
         {
           rel: "dns-prefetch",
