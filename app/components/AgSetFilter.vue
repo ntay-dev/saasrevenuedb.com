@@ -6,7 +6,7 @@
         type="text"
         placeholder="Search..."
         class="ag-set-filter-input"
-      />
+      >
     </div>
     <div class="ag-set-filter-actions">
       <button class="ag-set-filter-btn" @click="selectAll">All</button>
@@ -22,7 +22,7 @@
           type="checkbox"
           :checked="selected.has(val)"
           @change="toggle(val)"
-        />
+        >
         <span class="ag-set-filter-label">{{ val || "(empty)" }}</span>
       </label>
     </div>

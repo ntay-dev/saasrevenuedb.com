@@ -14,7 +14,7 @@
           :alt="product.name"
           class="h-full w-full object-contain"
           loading="lazy"
-        />
+        >
       </div>
       <div
         v-else

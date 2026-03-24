@@ -5,7 +5,7 @@
       <div class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
         <h1 class="text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl">
           <span class="text-(--color-text-primary)">Real revenue data.</span>
-          <br />
+          <br >
           <span class="gradient-text">Find your next market.</span>
         </h1>
         <p
@@ -186,7 +186,7 @@
                   :alt="product.name"
                   class="h-full w-full object-contain"
                   loading="lazy"
-                />
+                >
               </div>
               <div
                 v-else
@@ -349,7 +349,7 @@
                   :alt="product.name"
                   class="h-full w-full object-contain"
                   loading="lazy"
-                />
+                >
               </div>
               <div
                 v-else

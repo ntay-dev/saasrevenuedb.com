@@ -44,7 +44,7 @@
               placeholder="Search products..."
               class="w-full rounded-lg border border-(--color-border) bg-(--color-surface) py-2 pl-9 pr-3 text-sm text-(--color-text-primary) placeholder:text-(--color-text-muted) focus:border-emerald-500 focus:outline-none"
               @input="applyFilters"
-            />
+            >
           </div>
           <select
             v-model="selectedCategory"
@@ -95,7 +95,7 @@
               type="checkbox"
               class="rounded"
               @change="applyFilters"
-            />
+            >
             Hide anonymous
           </label>
         </div>

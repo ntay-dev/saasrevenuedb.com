@@ -12,7 +12,7 @@
       class="h-8 w-8 rounded-full object-cover ring-2 ring-white/10 transition-all group-hover:ring-blue-500/30"
       loading="lazy"
       @error="handleImgError"
-    />
+    >
     <div class="min-w-0">
       <p class="truncate text-sm font-medium text-(--color-text-primary)">
         {{ founder.name }}
