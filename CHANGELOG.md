@@ -2,6 +2,10 @@
 
 All notable changes to saasrevenuedb.com are documented here.
 
+## [1.2.3] - 2026-05-02
+
+- Add USt-ID DE461441119 to impressum (replaces "Beantragt" placeholder)
+
 ## [1.2.2] - 2026-03-22
 
 - Applied Prettier formatting across codebase

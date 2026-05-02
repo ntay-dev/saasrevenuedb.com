@@ -58,9 +58,7 @@
             Umsatzsteuer-Identifikationsnummer
           </h2>
           <p>Umsatzsteuer-Identifikationsnummer gemäß § 27a UStG:</p>
-          <p class="mt-1 font-medium">
-            Beantragt, wird nach Erteilung ergänzt.
-          </p>
+          <p class="mt-1 font-medium">DE461441119</p>
         </section>
 
         <section>
